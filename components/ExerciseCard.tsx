@@ -4,24 +4,26 @@ import { Link } from "react-scroll";
 import { Button, Stack, Typography } from "@mui/material";
 
 interface Exercise {
- 
   name: string;
   muscle: string;
   instructions: string;
-  difficulty:string;
+  difficulty: string;
   equipment: string;
   type: string;
 }
 
-
 const ExerciseCard = ({ exercise }: { exercise: Exercise }) => {
   return (
-    <Link className="exercise-card" to={"/exercise/${exercise.id}"}>
-         <Typography variant="h6" sx={{ color: "red" }}>
+    <Link
+      className="exercise-card"
+      to={`/exercise/${exercise.id}`}
+      style={{ backgroundColor: "black", color: "white", padding: "", borderRadius: "10px", display: "block", textDecoration: "none" }}
+    >
+      <Typography variant="h6" sx={{ color: "red" }}>
         {exercise.muscle}
       </Typography>
-      <h2>{exercise.name}</h2>
-      <p>{exercise.instructions}</p>
+      <h2 style={{ color: "white" }}>{exercise.name}</h2>
+      <p style={{ color: "white" }}>{exercise.instructions}</p>
       <Stack direction="row">
         <Button
           sx={{

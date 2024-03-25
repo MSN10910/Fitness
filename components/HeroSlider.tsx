@@ -73,7 +73,7 @@ const HeroSlider = () => {
               viewport={{ once: false, amount: 0.2 }}
               className="text-white italic text-center lg:text-left mb-4"
             >
-              &quot;Excuses don&apos;t burn calories.&quot; - Still Unknown
+              &quot;Excuses don&apos;t burn calories.&quot; - Unknown
             </motion.p>
             <motion.div
               variants={fadeIn("up", 0.8)}

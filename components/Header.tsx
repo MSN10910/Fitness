@@ -1,5 +1,4 @@
 "use client";
-
 import Nav from "./Nav";
 import MobileNav from "./MobileNav";
 import Link from "next/link";
@@ -13,13 +12,11 @@ const Header = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      //detect scroll
       setHeaderActive(window.scrollY > 50);
     };
-    //add scroll event
+
     window.addEventListener("scroll", handleScroll);
 
-    //clear scroll event
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
@@ -28,7 +25,7 @@ const Header = () => {
   return (
     <header
       className={`${headerActive ? "h-[100px]" : "h-[124px]"} 
-      fixed left-0 right-0 w-full bg-primary-200 h-[100px] transition-all`}
+      fixed left-0 right-0 w-full bg-black h-[100px] transition-all`}
       style={{ zIndex: 9999 }}
     >
       <div className="container mx-auto h-full flex items-center justify-between">
@@ -55,8 +52,6 @@ const Header = () => {
           {/* Login & Register */}
           <div className="text-white flex items-center gap-4">
             <span>Call Us:+254-722-549-896</span>
-            {/* <button className="hover:text-accent transition-all text-base uppercase font-medium">login</button>
-            <button className="hover:text-accent transition-all text-base uppercase font-medium" >register</button> */}
           </div>
           <button
             onClick={() => setOpenNav(!openNav)}

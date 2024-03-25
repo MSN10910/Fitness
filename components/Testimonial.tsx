@@ -15,35 +15,38 @@ import "swiper/css/pagination";
 //tewstimonial data
 const testimonialData = [
   {
-    img: "/assets/img/testimonial/lucy.jpg",
+    img: "/assets/img/testimonial/Robert.png",
     message:
-      "Joining the gym was the best decision of my life! Thanks to the supportive trainers and motivating atmosphere, I've never felt stronger and more confident.",
-    name: "Sarah J",
+      "Lovely place",
+    name: "Robert Ngotho",
+  },
+  
+  {
+    img: "/assets/img/testimonial/Wambui.png",
+    message: 
+      "Two months in, I have gained so much strength and knowledge courtesy of the owner. He is patient and very helpful. Facilities are great and it has a very supportive community within it. I would highly recommend it.",
+    name: "Wambui Githenya",
   },
   {
-    img: "/assets/img/testimonial/michael.jpg",
+    img: "/assets/img/testimonial/David.png",
     message:
-      "I've been a member for six months now, and I've already seen amazing results. The workouts are challenging but rewarding, and the staff is incredibly helpful.",
-    name: "Michael A",
+      "It's decent. I like it. The owner is so committed and helpful.",
+    name: "Karani Desmond",
   },
   {
-    img: "/assets/img/testimonial/maria.jpg",
+    img: "/assets/img/testimonial/Louis.png",
     message:
-      "I was hesitant to start my fitness journey, but the welcoming environment at this gym made me feel right at home. Now, I can't imagine my life without it!",
-    name: "Maria A",
+      "Not the largest of gyms but it will help you achieve your fitness goals. Its also very affordable.",
+    name: "Louis",
   },
   {
-    img: "/assets/img/testimonial/lucy.jpg",
+    img: "/assets/img/testimonial/Victor.png",
     message:
-      "As a busy professional, finding time for exercise was always a challenge. But this gym's flexible hours and convenient location make it easy to prioritize my health.",
-    name: "Lucy A",
+      "The next big thing",
+    name: "Cristopher Mwangi",
   },
-  {
-    img: "/assets/img/testimonial/maria.jpg",
-    message:
-      "Whether you're a beginner or a seasoned athlete, this gym has something for everyone. The trainers are knowledgeable, and the facilities are top-notch. Highly recommend!",
-    name: "Maria A",
-  },
+  
+
 ];
 
 import { motion } from "framer-motion";
@@ -51,19 +54,23 @@ import { fadeIn } from "@/lib/variants";
 
 const Testimonial = () => {
   return (
-    <section className="py-12 xl:py-28" id="testimonial">
+    <section className="py-12 xl:py-28" id="testimonial" style={{ background: "black" }}>
       <div className="container mx-auto">
         <motion.h2 
-        variants={fadeIn('up', 0.4)}
-        initial='hidden'
-        whileInView={'show'}
-        viewport={{ once: false, amount: 0.2 }}
-        className="h2 text-center">Testimonials</motion.h2>
+          variants={fadeIn('up', 0.4)}
+          initial='hidden'
+          whileInView={'show'}
+          viewport={{ once: false, amount: 0.2 }}
+          className="h2 text-center text-white"
+        >
+          Testimonials
+        </motion.h2>
         <motion.div
-             variants={fadeIn('up', 0.6)}
-             initial='hidden'
-             whileInView={'show'}
-             viewport={{ once: false, amount: 0.2 }}>
+          variants={fadeIn('up', 0.6)}
+          initial='hidden'
+          whileInView={'show'}
+          viewport={{ once: false, amount: 0.2 }}
+        >
           <Swiper
             slidesPerView={1}
             spaceBetween={30}
@@ -96,8 +103,8 @@ const Testimonial = () => {
                     />
                     <div className="flex flex-col justify-center items-center">
                       <FaQuoteLeft className="text-2xl text-gray-300" />
-                      <p className="max-w-[380px] mb-4">{person.message}</p>
-                      <span>{person.name}</span>
+                      <p className="max-w-[380px] mb-4 text-white">{person.message}</p>
+                      <span className="text-white">{person.name}</span>
                     </div>
                   </div>
                 </SwiperSlide>
@@ -111,3 +118,6 @@ const Testimonial = () => {
 };
 
 export default Testimonial;
+
+
+

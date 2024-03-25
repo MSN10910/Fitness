@@ -25,9 +25,9 @@ const trainerdata = [
 
 const Team = () => {
   return (
-    <section className="py-12 xl:h-[110vh]" id="team">
+    <section className="py-12 xl:h-[110vh]" id="team" style={{ background: "black" }}>
       <div className="container mx-auto h-full flex flex-col items-center justify-center">
-        <h2 className="h2 text-center mb-6">Trainers</h2>
+        <h2 className="h2 text-center mb-6 text-white">Trainers</h2>
         {/* trainers grid */}
         <div className="items-center">
           {trainerdata.map((trainer, index) => {
@@ -37,7 +37,7 @@ const Team = () => {
                 key={index}
               >
                 {/* image */}
-                <div className="relative w-[320px] h-[360px] mx-auto mb-4 style={{ zIndex:  }}">
+                <div className="relative w-[320px] h-[360px] mx-auto mb-4">
                   <Image src={trainer.image} fill alt="" />
                 </div>
                 {/* name*/}
@@ -46,7 +46,7 @@ const Team = () => {
                   initial="hidden"
                   whileInView={"show"}
                   viewport={{ once: false, amount: 0.2 }}
-                  className="h4 mb-2"
+                  className="h4 mb-2 text-white"
                 >
                   {trainer.name}
                 </motion.h4>
@@ -56,7 +56,7 @@ const Team = () => {
                   initial="hidden"
                   whileInView={"show"}
                   viewport={{ once: false, amount: 0.2 }}
-                  className="uppercase text-xs tracking-[3px] mb-2"
+                  className="uppercase text-xs tracking-[3px] mb-2 text-white"
                 >
                   {trainer.role}
                 </motion.p>
@@ -66,7 +66,7 @@ const Team = () => {
                   initial="hidden"
                   whileInView={"show"}
                   viewport={{ once: false, amount: 0.2 }}
-                  className="mb-6"
+                  className="mb-6 text-white"
                 >
                   {trainer.description}
                 </motion.p>
@@ -79,13 +79,14 @@ const Team = () => {
                   className="flex gap-12 justify-center"
                 >
                   {trainer.social.map((social, index) => {
+                    const SocialIcon = social.icon;
                     return (
                       <div key={index}>
                         <Link
                           href={social.href}
                           className="hover:text-accent transition-all"
                         >
-                          <social.icon className="text-lg" />
+                          <SocialIcon className="text-lg text-white" />
                         </Link>
                       </div>
                     );

@@ -1,5 +1,3 @@
-"use client";
-
 import CountUp from "react-countup";
 import { FaBriefcase, FaClock, FaTrophy } from "react-icons/fa";
 import { ImUsers } from "react-icons/im";
@@ -9,9 +7,9 @@ import { useRef } from "react";
 
 const stats = [
   {
-    number: 19,
+    number: 40,
     icon: FaBriefcase,
-    text: "training courses",
+    text: "classes",
   },
   {
     number: 1000,
@@ -23,36 +21,36 @@ const stats = [
     icon: ImUsers,
     text: "happy customers",
   },
-  {
-    number: 9,
-    icon: FaTrophy,
-    text: "awards",
-  },
+  // {
+  //   number: 9,
+  //   icon: FaTrophy,
+  //   text: "awards",
+  // },
 ];
 
-//animation 
+// Animation variants
 const statsContainerVariant = {
-    hiddden: { opacity: 0 },
-    show: {
-        opacity : 1,
-        transition: {
-            staggerChildren: 0.4,
-            duration: 0.5,
-            ease: 'linear',
-        },
+  hidden: { opacity: 0 },
+  show: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.4,
+      duration: 0.5,
+      ease: 'linear',
     },
+  },
 };
 
 const statsItem = {
-    hidden : {y:20, opacity: 0},
-    show: {
-        y: 0,
-        opacity: 1,
-        transition: {
-            duration: 0.5,
-            ease: [0.25, 0.6, 0.3, 0.8],
-        },
+  hidden: { y: 20, opacity: 0 },
+  show: {
+    y: 0,
+    opacity: 1,
+    transition: {
+      duration: 0.5,
+      ease: [0.25, 0.6, 0.3, 0.8],
     },
+  },
 };
 
 const Achievements = () => {
@@ -62,33 +60,35 @@ const Achievements = () => {
     <section>
       <div className="container mx-auto">
         <motion.div
-        variants={statsContainerVariant}
-        initial='hidden'
-        whileInView={'show'}
-        viewport={{ once: false, amount: 0.3}}
-        className="grid grid-cols-2 md:grid-cols-4 gap-16">
+          variants={statsContainerVariant}
+          initial='hidden'
+          animate={isInView ? 'show' : 'hidden'}
+          className="grid grid-cols-2 md:grid-cols-4 gap-16"
+        >
           {stats.map((item, index) => {
+            const Icon = item.icon; // Dynamically render the icon component
             return (
               <motion.div
-              variants={statsItem}
-               className="flex flex-col justify-center items-center"
-              key={index}>
+                variants={statsItem}
+                className="flex flex-col justify-center items-center"
+                key={index}
+              >
                 {/* Circle Outer */}
-                <div className="border border-accent/90 w-[140px] h-[140px] mx-auto rounded-full p-1 mb6">
-                  {/* circle inner and count number */}
+                <div className="border border-accent/90 w-[140px] h-[140px] mx-auto rounded-full p-1 mb-6">
+                  {/* Circle inner and count number */}
                   <div
                     ref={ref}
-                    className="border border-accent/30 w-full h-full flex items-center justify-center text-5xl rounded-full"
+                    className="border border-accent/30 w-full h-full flex items-center justify-center text-5xl rounded-full text-white"
                   >
                     {isInView && (
-                      <CountUp start={0} end={item.number} duration={6} />
+                      <CountUp start={0} end={item.number} duration={6} formattingFn={(value) => `${value}+`} />
                     )}
                   </div>
                 </div>
-                {/* text */}
+                {/* Text */}
                 <div className="flex flex-col justify-center items-center text-center">
-                  <item.icon className="text-3xl mb-2" />
-                  <h4 className="h4">{item.text}</h4>
+                  <Icon className="text-3xl mb-2 text-white" />
+                  <h4 className="h4 text-white">{item.text}</h4>
                 </div>
               </motion.div>
             );

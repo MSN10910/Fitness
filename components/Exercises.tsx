@@ -4,15 +4,13 @@ import { Box, Stack, Typography } from "@mui/material";
 import ExerciseCard from "./ExerciseCard";
 
 interface Exercise {
-
   name: string;
   muscle: string;
   instructions: string;
-  difficulty:string;
+  difficulty: string;
   equipment: string;
   type: string;
 }
-
 
 interface Props {
   exercises: Exercise[];
@@ -21,9 +19,9 @@ interface Props {
 // Define the Exercises component
 const Exercises: React.FC<Props> = ({ exercises }) => {
   return (
-    <Box id="exercises" sx={{ mt: { lg: "110px", xs: "50px" }, p: "20px" }}>
-      <Typography variant="h3" mb="46px">
-        Showing Results
+    <Box id="exercises" sx={{ mt: { lg: "px", xs: "" }, p: "20px", backgroundColor: "black", color: "white" }}>
+      <Typography variant="h7" mb="46px" sx={{ color: "white" }}>
+      Your Exercises Await
       </Typography>
       <Stack
         direction="row"

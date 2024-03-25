@@ -16,32 +16,26 @@ const Brands = () => {
         "https://api.api-ninjas.com/v1/exercises",
         exerciseOptions
       );
-      // const searchedExercises = exercisesData.filter(
-      //   (exercise) =>
-      //     exercise.name.toLowerCase().includes(search) ||
-      //     exercise.type.toLowerCase().includes(search) ||
-      //     exercise.equipment.toLowerCase().includes(search) ||
-      //     exercise.muscle.toLowerCase().includes(search)
-      // );
-      // setSearch('');
       setExercises(exercisesData);
-      //console.log(exercisesData);
     }
   };
+
   return (
     <>
       <Stack
         alignItems="center"
-        mt="37px"
+        mt=""
         justifyContent="center"
-        p="20px"
+        p=""
         id="exercises"
+        sx={{ backgroundColor: "black", color: "white" }} // Set background and text color
       >
         <Typography
           fontWeight={700}
           sx={{ fontSize: { lg: "44px", xs: "30px" } }}
           mb="49px"
           textAlign="center"
+          variant="h5"
         >
           Must-Try Exercises You <br /> Should Know
         </Typography>
@@ -76,7 +70,7 @@ const Brands = () => {
           </Button>
         </Box>
       </Stack>
-      <Exercises  exercises={exercises} />
+      <Exercises exercises={exercises} />
     </>
   );
 };

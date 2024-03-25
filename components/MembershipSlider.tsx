@@ -20,7 +20,7 @@ import "swiper/css/pagination";
 const membershipData = [
   {
     title: "Daily",
-    price: "100",
+    price: "200",
     benefits: [
       {
         icon: FaCheck,
@@ -54,7 +54,7 @@ const membershipData = [
   },
   {
     title: "Weekly",
-    price: "500",
+    price: "1000",
     benefits: [
       {
         icon: FaCheck,
@@ -88,6 +88,142 @@ const membershipData = [
   },
   {
     title: "monthly",
+    price: "2500",
+    benefits: [
+      {
+        icon: FaCheck,
+        text: "Access all gym facilities",
+      },
+      {
+        icon: FaCheck,
+        text: "Includes Membership",
+      },
+      {
+        icon: FaCheck,
+        text: "Diet plan included",
+      },
+      {
+        icon: FaCheck,
+        text: "Health and Fitness tips",
+      },
+      {
+        icon: FaCheck,
+        text: "Mon-Sun gym access",
+      },
+      {
+        icon: FaCheck,
+        text: "Full access to everything",
+      },
+      {
+        icon: FaCheck,
+        text: "Addition amenities",
+      },
+    ],
+  },
+  {
+    title: "Quaterly",
+    price: "7000",
+    benefits: [
+      {
+        icon: FaCheck,
+        text: "Access all gym facilities",
+      },
+      {
+        icon: FaCheck,
+        text: "Includes Membership",
+      },
+      {
+        icon: FaCheck,
+        text: "Diet plan included",
+      },
+      {
+        icon: FaCheck,
+        text: "Health and Fitness tips",
+      },
+      {
+        icon: FaCheck,
+        text: "Mon-Sun gym access",
+      },
+      {
+        icon: FaCheck,
+        text: "Full access to everything",
+      },
+      {
+        icon: FaCheck,
+        text: "Addition amenities",
+      },
+    ],
+  },
+  {
+    title: "Semi-Annual",
+    price: "12000",
+    benefits: [
+      {
+        icon: FaCheck,
+        text: "Access all gym facilities",
+      },
+      {
+        icon: FaCheck,
+        text: "Includes Membership",
+      },
+      {
+        icon: FaCheck,
+        text: "Diet plan included",
+      },
+      {
+        icon: FaCheck,
+        text: "Health and Fitness tips",
+      },
+      {
+        icon: FaCheck,
+        text: "Mon-Sun gym access",
+      },
+      {
+        icon: FaCheck,
+        text: "Full access to everything",
+      },
+      {
+        icon: FaCheck,
+        text: "Addition amenities",
+      },
+    ],
+  },
+  {
+    title: "Yearly",
+    price: "25000",
+    benefits: [
+      {
+        icon: FaCheck,
+        text: "Access all gym facilities",
+      },
+      {
+        icon: FaCheck,
+        text: "Includes Membership",
+      },
+      {
+        icon: FaCheck,
+        text: "Diet plan included",
+      },
+      {
+        icon: FaCheck,
+        text: "Health and Fitness tips",
+      },
+      {
+        icon: FaCheck,
+        text: "Mon-Sun gym access",
+      },
+      {
+        icon: FaCheck,
+        text: "Full access to everything",
+      },
+      {
+        icon: FaCheck,
+        text: "Addition amenities",
+      },
+    ],
+  },
+  {
+    title: "Student-monthly",
     price: "1500",
     benefits: [
       {
@@ -140,7 +276,7 @@ const MembershipSlider = () => {
           spaceBetween: 30,
         },
       }}
-      className="min-h-[680px]"
+      className="bg-black min-h-[680px]"
     >
       {membershipData.map((item, index) => {
         return (

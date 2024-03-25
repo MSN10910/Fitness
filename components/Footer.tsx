@@ -1,4 +1,5 @@
 "use client";
+
 import Image from "next/image";
 import Link from "next/link";
 
@@ -47,7 +48,7 @@ const footerItem = {
 
 const Footer = () => {
   return (
-    <footer className="bg-primary-300 pt-24">
+    <footer className="bg-black pt-24">
       <div className="container mx-auto pb-24">
         <motion.div 
         variants={footerContainerVariant}
@@ -66,8 +67,7 @@ const Footer = () => {
               />
             </Link>
             <p className="max-w-sm">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate
-              sunt dolore quaerat?
+              Marurui Gym Fitness For Less
             </p>
             <ul className="flex flex-col gap-4">
               <li className="flex items-center gap-4">
@@ -86,43 +86,8 @@ const Footer = () => {
               </li>
             </ul>
           </motion.div>
-          {/* Blog */}
-          <motion.div variants={footerItem} >
-            <h4 className="h4 text-accent mb-4">recent Blog Posts</h4>
-            {/* Post */}
-            <div className="border-b border-dotted border-gray-400 flex flex-col gap-3 pb-3 mb-4">
-              <Link className="hover:text-accent transition-all" href="#">
-                <h5 className="h5 leading-snug">
-                  How to stay motivated for all exercises
-                </h5>
-                <p className="text-gray-400 text-[12px] tracking-[3px] uppercase">
-                  November 03, 2023
-                </p>
-              </Link>
-            </div>
-            {/* Post */}
-            <div className="border-b border-dotted border-gray-400 flex flex-col gap-3 pb-3 mb-4">
-              <Link className="hover:text-accent transition-all" href="#">
-                <h5 className="h5 leading-snug">
-                  How to stay motivated for all exercises
-                </h5>
-                <p className="text-gray-400 text-[12px] tracking-[3px] uppercase">
-                  November 03, 2023
-                </p>
-              </Link>
-            </div>
-            {/* Post */}
-            <div className="flex flex-col gap-3 pb-3 mb-4">
-              <Link className="hover:text-accent transition-all" href="#">
-                <h5 className="h5 leading-snug">
-                  How to stay motivated for all exercises
-                </h5>
-                <p className="text-gray-400 text-[12px] tracking-[3px] uppercase">
-                  November 03, 2023
-                </p>
-              </Link>
-            </div>
-          </motion.div>
+
+
           {/* gallery */}
           <motion.div variants={footerItem} >
             <h4 className="h4 text-accent mb-4">Gallery</h4>
@@ -187,23 +152,7 @@ const Footer = () => {
             </div>
           </motion.div>
           {/* newsletter*/}
-          <motion.div variants={footerItem} >
-            <h4 className="h4 text-accent mb-4">NewsLetter</h4>
-            <div className="flex flex-col gap-4">
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit
-                accusantium omnis reiciendis.
-              </p>
-              <form className="flex items-center">
-                <input
-                  type="text"
-                  placeholder="Your email address"
-                  className="h-[50px] outline-none px-4 text-primary-300"
-                />
-                <CustomButton containerStyles="h-[50px] px-8" text="send" />
-              </form>
-            </div>
-          </motion.div>
+
         </motion.div>
       </div>
       {/* copyright */}
