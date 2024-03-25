@@ -5,8 +5,6 @@ import Team from "@/components/Team";
 import Membership from "@/components/Membership";
 import Testimonial from "@/components/Testimonial";
 import Blog from "@/components/Blog";
-import Brands from "@/components/SearchExercises";
-import Exercises from "@/components/Exercises";
 import Gallery from "@/components/Gallery";
 
 export default function Home() {
